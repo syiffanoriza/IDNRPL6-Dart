@@ -1,6 +1,9 @@
 import 'package:dart_fundamental/dart_fundamental.dart' as dart_fundamental;
 import 'package:test/expect.dart';
 
+// 01/12: Getting User Input
+import 'dart:io';
+
 void main(List<String> arguments) {
   // print('Hello world: ${dart_fundamental.calculate()}!');
 
@@ -74,4 +77,22 @@ void main(List<String> arguments) {
     print("Failed to Authenticate");
   }
 
+  // 01/12: Getting User Input
+  stdout.write("name: ");
+  // std = standard
+  var name = stdin.readLineSync();
+
+  print("my name is $name");
+  
+  // 01/12: Exercise Auth with User Input
+  stdout.write("Email: ");
+  var userEmail = stdin.readLineSync();
+  stdout.write("Password: ");
+  var userPassword = stdin.readLineSync();
+  
+  if (userEmail == "yes" && userPassword == "alsoYes"){
+    print("Success woo hoo");
+  } else {
+    print("OH no");
+  }
 }
