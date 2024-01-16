@@ -4,7 +4,7 @@ import 'package:test/expect.dart';
 // 01/12: Getting User Input
 import 'dart:io';
 
-void main(List<String> arguments) {
+void main() {
   // print('Hello world: ${dart_fundamental.calculate()}!');
 
   // 01/11: Variables
@@ -115,4 +115,79 @@ void main(List<String> arguments) {
   final sample = 'sample';
   sample = 'hanun';
 
+  // 01/16: Null Safe Operator
+  String? nullVar = null;
+  print(nullVar);
+
+  // 01/16: Functions
+  detailStudent("kia", 17);
+
+  // 01/16: Making null checker for follower
+  String? follower = null;
+
+  if (follower == null){
+    print("You do not have any follower");
+  } else {
+    print(follower);
+  }
+
+  // 01/16: Elvis Operator
+  String? followers;
+  var defaultValue = followers ?? 'name1, name2, name3';
+
+  if (followers == null){
+    print(defaultValue);
+  } else {
+    print(followers);
+  }
+
+  // 01/16: Exercise: Make an Elvis Operator Study Case
+  var matchaStock;
+  matchaStock ??= "You need to restock!";
+
+  print(matchaStock);
+
+  // 01/16: for
+  for (int i = 1; i <= 10; i++){
+    print(i);
+  }
+
+  // 01/16: while
+  var i = 1;
+
+  while(i <= 10) {
+    print(i);
+    i++;
+  }
+
+  // 01/16: do-while
+  do {
+    print(i);
+    i++;
+  } while (i <= 10);
+
+  // 01/16: List
+  List<int> listNumber = [1, 2, 3, 4];
+
+  // 01/16: Type Inference
+  // when the runtime already recognize data type without explicitly declaring it
+  var sampleString = "sample";
+  var sampleAge = 12;
+  print(sampleString.runtimeType); // this will return: String
+  print(sampleAge.runtimeType); // this will return: int
+
+  var listNumberToo = [1, 2, 4];
+  print(listNumberToo.runtimeType); // this will return: List<int>
+
+  var listString = ["Asiah", "Dilah", "Asya"];
+  print(listString.runtimeType); // this will return: List<String>
+
+  var combineDataList = ["fildza", 16, true];
+  print(combineDataList.runtimeType); // this will return: List<Object>
+}
+
+// 01/16: Functions
+void detailStudent(String name, int age){
+  print(name);
+  print(age);
 }
