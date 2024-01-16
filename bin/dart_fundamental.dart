@@ -95,4 +95,24 @@ void main(List<String> arguments) {
   } else {
     print("OH no");
   }
+
+  // 01/15: Making sum calculator with user input
+  stdout.write("Insert first number: ");
+  int firstNum = int.parse(stdin.readLineSync()!);
+  stdout.write("Insert second number: ");
+  int secondNum = int.parse(stdin.readLineSync()!);
+
+  if (firstNum > 0 || secondNum > 0){
+    int num = firstNum + secondNum;
+    print(num);
+  } else {
+    print("Unable to sum negative numbers");
+  }
+
+  // 01/15: Immutable / Mutable data
+  const name = 'name';
+  name = 'name2';
+  final sample = 'sample';
+  sample = 'hanun';
+
 }
