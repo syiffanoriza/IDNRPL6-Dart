@@ -184,6 +184,31 @@ void main() {
 
   var combineDataList = ["fildza", 16, true];
   print(combineDataList.runtimeType); // this will return: List<Object>
+
+  // 01/18: Dart Evaluation
+  /*
+  * Conditions:
+  * Already Become a Member
+  * At least spend 50k for shopping
+  *
+  * Requirement:
+  * Will get discount if one of conditions fulfilled
+  */
+
+  List Person = ["Peter", false, 20];
+
+  /*
+  * WHAT THE LIST REPRESENTS:
+  * First String = Name
+  * Second Bool = Are they a member or not?
+  * Third Int = Money Spent
+  */
+
+  if (Person[1] == true || Person[2] >= 50){
+    print("Discount Available!");
+  } else {
+    print("Discount Unavailable");
+  }
 }
 
 // 01/16: Functions
