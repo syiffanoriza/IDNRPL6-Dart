@@ -5,6 +5,7 @@ import 'package:test/expect.dart';
 import 'dart:io';
 
 void main() {
+
   // print('Hello world: ${dart_fundamental.calculate()}!');
 
   // 01/11: Variables
@@ -83,13 +84,13 @@ void main() {
   var name = stdin.readLineSync();
 
   print("my name is $name");
-  
+
   // 01/12: Exercise Auth with User Input
   stdout.write("Email: ");
   var userEmail = stdin.readLineSync();
   stdout.write("Password: ");
   var userPassword = stdin.readLineSync();
-  
+
   if (userEmail == "yes" && userPassword == "alsoYes"){
     print("Success woo hoo");
   } else {
@@ -110,10 +111,10 @@ void main() {
   }
 
   // 01/15: Immutable / Mutable data
-  const name = 'name';
-  name = 'name2';
-  final sample = 'sample';
-  sample = 'hanun';
+  // const name = 'name';
+  // name = 'name2';
+  // final sample = 'sample';
+  // sample = 'hanun';
 
   // 01/16: Null Safe Operator
   String? nullVar = null;
@@ -186,23 +187,23 @@ void main() {
   print(combineDataList.runtimeType); // this will return: List<Object>
 
   // 01/18: Dart Evaluation
-  /*
+/*
   * Conditions:
   * Already Become a Member
   * At least spend 50k for shopping
   *
   * Requirement:
   * Will get discount if one of conditions fulfilled
-  */
+*/
 
   List Person = ["Peter", false, 20];
 
-  /*
+/*
   * WHAT THE LIST REPRESENTS:
   * First String = Name
   * Second Bool = Are they a member or not?
   * Third Int = Money Spent
-  */
+*/
 
   if (Person[1] == true || Person[2] >= 50){
     print("Discount Available!");
